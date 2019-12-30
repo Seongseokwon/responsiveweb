@@ -3,6 +3,23 @@
 //https://share.naver.com/web/shareView.nhn?url={페이지링크}&title={페이지 제목}
 //https://plus.google.com/share?url={페이지링크}&t={페이지 제목}
 
+//이미지 슬라이더
+$(".slider").slick({
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        autoplay: false
+      }
+    }
+  ]
+});
+
+//SNS 공유하기
 $(".facebook").click(function(e) {
   e.preventDefault();
   window.open(

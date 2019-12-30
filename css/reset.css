@@ -81,6 +81,11 @@ h6 {
     font-weight: normal;
 }
 
+/*버튼 초기화*/
+button {
+    border: 0;
+}
+
 /* margin, padding*/
 .mt10 {
     margin-top: 10px !important;
@@ -108,6 +113,12 @@ h6 {
 
 .mt40 {
     margin-top: 40px !important;
+}
+
+
+/*반응형 이미지*/
+img {
+    width: 100%;
 }
 
 
