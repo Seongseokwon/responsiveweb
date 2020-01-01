@@ -3,6 +3,31 @@
 //https://share.naver.com/web/shareView.nhn?url={페이지링크}&title={페이지 제목}
 //https://plus.google.com/share?url={페이지링크}&t={페이지 제목}
 
+//접기 펼치기
+$(".btn").click(function(e) {
+  e.preventDefault();
+  $(".nav").slideToggle();
+  $(".btn").toggleClass("open");
+  if ($(".btn").hasClass("open")) {
+    //open이 있을 때
+    //attr 속성 가져오거나 변경
+    $(".btn")
+      .find("i")
+      .attr("class", "fa fa-angle-up");
+  } else {
+    //open이 없을 때
+    $(".btn")
+      .find("i")
+      .attr("class", "fa fa-angle-down");
+  }
+});
+
+$(window).resize(function(e) {
+  var wWidth = $(window).width();
+  if (wWidth > 600) {
+    $(".nav").removeAttr("style");
+  }
+});
 //라이트 박스
 $(".lightbox").lightGallery({});
 
